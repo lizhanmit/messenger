@@ -23,7 +23,7 @@ import org.koushik.javabrains.messenger.service.MessageService;
 
 @Path("/messages") // gate annotation
 @Consumes(MediaType.APPLICATION_JSON) // use @Consumes to specify the expected request body format
-@Produces(MediaType.APPLICATION_JSON)
+@Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
 public class MessageResource {
 
 	private MessageService messageService = new MessageService();
